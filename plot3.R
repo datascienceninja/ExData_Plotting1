@@ -6,7 +6,7 @@ data_sub <- subset(data, subset=(Date >= "2007-02-01" & Date <= "2007-02-02"))
 datetime <- paste(as.Date(data_sub$Date), data_sub$Time)
 data_sub$Datetime <- as.POSIXct(datetime)
 
-with(data_sub, {plot(Sub_metering_1~Datetime, type="l", ylab="Global Active Power (kilowatts)", xlab="") 
+with(data_sub, {plot(Sub_metering_1~Datetime, type="l", ylab="Energy sub metering", xlab="") 
   lines(Sub_metering_2~Datetime,col='Red')
   lines(Sub_metering_3~Datetime,col='Blue')
 })
